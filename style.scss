@@ -162,18 +162,34 @@ a {
     font-family: var(--title-font);
     text-align: center;
     color: var(--theme-clr);
-    h1 {
-      font-weight: 600;
-    }
     .card {
-      border: 1px solid rgba(51, 51, 51, 0.1);
+      background-color: #fff;
       border-radius: 8px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      width: 400px;
+      width: 300px;
+      color: #000;
+      overflow: hidden;
       img {
         height: 300px;
         width: 100%;
         background-color: salmon;
+      }
+      h2 {
+        font-family: var(--title-font);
+        font-weight: 600;
+        font-size: 1em;
+        margin: 0 5px;
+      }
+      .date {
+        font-family: var(--title-font);
+        font-weight: 600;
+        font-size: 0.7em;
+      }
+      .text {
+        font-family: var(--title-font);
+        font-weight: 400;
+        font-size: 0.6em;
+        padding: 5px 10px 10px;
       }
     }
   }
@@ -182,7 +198,7 @@ a {
     font-size: 1.2rem;
     font-family: var(--link-font);
     cursor: pointer;
-    margin-top: 20px;
+    margin: 40px 0;
     background-color: var(--bcg-clr);
     border: hidden;
     border-radius: 2px;
@@ -345,4 +361,49 @@ a {
       transform: translateX(625px);
     }
   }
+}
+#sixSection {
+  background-color: var(--bcg-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  flex-direction: column;
+  text-align: center;
+}
+
+#sixSection div {
+  width: 500px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: black;
+  border-radius: 2.5%;
+}
+
+#seventhSection {
+  background-color: var(--bcg-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  flex-direction: column;
+  text-align: center;
+}
+
+#seventhSection h2 {
+  font-size: 1.25rem;
+}
+
+#seventhSection div {
+  padding-left: 0px;
+}
+
+#seventhSection ul {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style-position: inside;
+  text-align: left;
 }
