@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<script src="index.js"></script>
 <body>
     <header id="pageHeader">
         <img id="logo" src="" alt="">
@@ -40,6 +40,60 @@
     <section id="secondSection">
         <h1>Venez tester vos connaissances<br> dans un Escape Game !</h1>
         <button>Escape Game</button>
+    </section>
+    <section id="fifthSection">
+        <div id="formContainer">
+            <h1>Et vous ?</h1>
+            <form action="post" id="contactForm">
+                
+                <div id="contactInfo">
+                    <label for="username">Votre Nom :</label>
+                    <input id="username" type="text" placeholder="écrivez votre nom ici.." required>
+                    
+                    <label for="usermail">Votre adresse mail :</label>
+                    <input id="usermail" type="email" placeholder="écrivez votre adresse mail ici.." required>
+                    
+                </div>
+                <div class="secondChoice">
+                    
+                        <h2>Sexe</h2>
+                        <label>
+                           <input type="radio" id="homme" name="sexe">
+                            <i for="homme">Homme</i> 
+                        </label>
+                            
+                        <label>
+                            <input type="radio" id="homme" name="sexe">
+                            <i for="homme">Femme</i>
+                        </label>
+                            
+                        <label>
+                            <input type="radio" id="homme" name="sexe">
+                            <i for="homme">Non-binaire</i>
+                        </label>
+                            
+                        <label>
+                            <input type="radio" id="homme" name="sexe">
+                            <i for="homme">Autre</i>
+                        </label>
+                            
+                    
+                    
+                </div>
+                
+            </form>
+            <button id="next" type="button" onclick="nextStep()">Next</button>
+                <div id="formStageContainer">
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div class="progressItem"></div>
+                    <div id="tracer" class="zero"></div>
+                </div>
+        </div>
     </section>
 
 </body>
