@@ -1,101 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<script src="index.js"></script>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <header id="pageHeader">
-        <img id="logo" src="" alt="">
-        <ul>
-            <li>
-                <a href="#accueil">Accueil</a>
-            </li>
-            <li>
-                <a href="#escape game">Escape game</a>
-            </li>
-            <li>
-                <a href="#actus">Actus</a>
-            </li>
-            <li>
-                <a href="dons">Dons</a>
-            </li>
-            <li>
-                <a href="contact">Contact</a>
-            </li>
-        </ul>
-
-
+      <img id="logo" src="" alt="" />
+      <ul>
+        <li>
+          <a href="#accueil">Accueil</a>
+        </li>
+        <li>
+          <a href="#escape game">Escape game</a>
+        </li>
+        <li>
+          <a href="#actus">Actus</a>
+        </li>
+        <li>
+          <a href="dons">Dons</a>
+        </li>
+        <li>
+          <a href="contact">Contact</a>
+        </li>
+      </ul>
     </header>
     <section id="firstSection">
-        <div id="slogan">
-            <h1>IST, Choppez-les tous !</h1>
-        </div>
+      <div id="slogan">
+        <h1>IST, Choppez-les tous !</h1>
+      </div>
     </section>
     <section id="secondSection">
-        <h1>Venez tester vos connaissances<br> dans un Escape Game !</h1>
-        <button>Escape Game</button>
+      <h1>
+        Venez tester vos connaissances<br />
+        dans un Escape Game !
+      </h1>
+      <button>Escape Game</button>
+    </section>
+    <section id="fourthSection">
+      <h1>Les nouveautés</h1>
+      <div class="content">
+        <div class="card">
+          <img src="./images/1.jpg" alt=""" />
+          <h2>Titre</h2>
+          <p class="date">4 seprembre 2022</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            obcaecati laboriosam, iste minus delectus facere ipsum fugiat autem
+            alias tempore earum laudantium est? Quas fugit earum excepturi porro
+            similique eligendi?
+          </p>
+        </div>
+        <div class="card">
+          <img src="" alt=""" />
+          <h2>Titre</h2>
+          <p class="date">4 seprembre 2022</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            obcaecati laboriosam, iste minus delectus facere ipsum fugiat autem
+            alias tempore earum laudantium est? Quas fugit earum excepturi porro
+            similique eligendi?
+          </p>
+        </div>
+        <div class="card">
+          <img src="" alt="" />
+          <h2>Titre</h2>
+          <p class="date">4 seprembre 2022</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            obcaecati laboriosam, iste minus delectus facere ipsum fugiat autem
+            alias tempore earum laudantium est? Quas fugit earum excepturi porro
+            similique eligendi?
+          </p>
+        </div>
+      </div>
+      <button>Voir plus d'Actus</button>
     </section>
     <section id="fifthSection">
-        <div id="formContainer">
-            <h1>Abonnez-vous à notre newsletter !</h1>
-            <form action="post" id="contactForm">
-                
-                <div id="contactInfo">
-                    <label for="username">Votre Nom :</label>
-                    <input id="username" type="text" placeholder="écrivez votre nom ici.." required>
-                    
-                    <label for="usermail">Votre adresse mail :</label>
-                    <input id="usermail" type="email" placeholder="écrivez votre adresse mail ici.." required>
-                    
-                </div>
-                <div class="secondChoice">
-                    
-                        <h2>Sexe</h2>
-                        <label>
-                           <input type="radio" id="homme" name="sexe">
-                            <i for="homme">Homme</i> 
-                        </label>
-                            
-                        <label>
-                            <input type="radio" id="homme" name="sexe">
-                            <i for="homme">Femme</i>
-                        </label>
-                            
-                        <label>
-                            <input type="radio" id="homme" name="sexe">
-                            <i for="homme">Non-binaire</i>
-                        </label>
-                            
-                        <label>
-                            <input type="radio" id="homme" name="sexe">
-                            <i for="homme">Autre</i>
-                        </label>
-                            
-                    
-                    
-                </div>
-                
-            </form>
-            <button id="next" type="button" onclick="nextStep()">Next</button>
-                <div id="formStageContainer">
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div class="progressItem"></div>
-                    <div id="tracer" class="zero"></div>
-                </div>
+      <div id="formContainer">
+        <h1>Abonnez-vous à notre newsletter !</h1>
+        <form action="post" id="contactForm">
+          <div id="contactInfo">
+            <label for="username">Votre Nom :</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="écrivez votre nom ici.."
+              required
+            />
+
+            <label for="usermail">Votre adresse mail :</label>
+            <input
+              id="usermail"
+              type="email"
+              placeholder="écrivez votre adresse mail ici.."
+              required
+            />
+          </div>
+          <div class="secondChoice">
+            <h2>Sexe</h2>
+            <label>
+              <input type="radio" id="homme" name="sexe" />
+              <i for="homme">Homme</i>
+            </label>
+
+            <label>
+              <input type="radio" id="homme" name="sexe" />
+              <i for="homme">Femme</i>
+            </label>
+
+            <label>
+              <input type="radio" id="homme" name="sexe" />
+              <i for="homme">Non-binaire</i>
+            </label>
+
+            <label>
+              <input type="radio" id="homme" name="sexe" />
+              <i for="homme">Autre</i>
+            </label>
+          </div>
+        </form>
+        <button id="next" type="button" onclick="nextStep()">Next</button>
+        <div id="formStageContainer">
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div class="progressItem"></div>
+          <div id="tracer" class="zero"></div>
         </div>
+      </div>
     </section>
-
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
