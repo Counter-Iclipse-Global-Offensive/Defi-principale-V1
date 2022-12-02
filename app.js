@@ -1,37 +1,3 @@
-// header words
-const positif = document.querySelectorAll("#positif div");
-const negatif = document.querySelectorAll("#negatif div");
-positif.forEach((e) => {
-  const top = Math.round(
-    Math.random() * (window.screen.height * 0.9 - window.screen.height * 1)
-  );
-  const left = Math.round(
-    Math.random() * (window.screen.width * 0.9 - window.screen.width * 1)
-  );
-  e.style.top = `${top}px`;
-  e.style.left = `${left}px`;
-});
-negatif.forEach((e) => {
-  const top =
-    Math.round(
-      Math.random() * (window.screen.height * 0.8 - window.screen.height * 0.2)
-    ) + 50;
-  const left =
-    Math.round(
-      Math.random() * (window.screen.width * 0.8 - window.screen.width * 0.2)
-    ) + 50;
-  e.style.top = `${top}px`;
-  e.style.left = `${left}px`;
-});
-
-function loadcookies() {
-  if (!document.cookie) {
-    uniqueId = Math.random().toString(36).substr(2, 9) + Math.random().toString(36).substr(2, 9) + Math.random().toString(36).substr(2, 9) + Math.random().toString(36).substr(2, 9);
-    const cookie = `cookie=${uniqueId}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-    document.cookie = cookie;
-  }
-  console.log(document.cookie);
-}
 // var xhr = new XMLHttpRequest();
 // xhr.open('POST', './', true);
 // xhr.onreadystatechange = function() {
@@ -40,3 +6,44 @@ function loadcookies() {
 //   }
 // };
 // xhr.send(JSON.stringify({ uniqueId : document.cookie, connect : true }));
+
+const mongoose = require("mongoose");
+const { DATABASE_URI } = require("./config.json");
+const news = require("./models/news.model");
+
+// database connection
+//Le proxi du serveur de l'esia peut le bloquer, alors pour l'instant on laisse comme ça.
+mongoose
+  .connect(DATABASE_URI, {
+    autoIndex: false, // Don't build indexes
+    maxPoolSize: 10, // Maintain up to 10 socket connections
+    serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+    socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
+    family: 4, // Use IPv4, skip trying IPv6
+  })
+  .then(() => {
+    console.log("Successfully connected to the database !");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+const actus = async () => {
+  const newsModel = await news.findOne({ id: 1 });
+
+  if (!newsModel) {
+    const newsM = new news({
+      id: 1,
+      date: "23 février 2022",
+      title: "INFO SERVICE GUYANE",
+      desc: "Sida Info Service ouvre ses services d'écoute en Guyane. La ligne est gratuite et accessible chaque lundi, mercredi et vendredi de 17 h à 23 h. Ces services sont disponibles en français, créole, créole haïtien, portugais et espagnol. Au cours du second semestre 2022, SIS Association élargira les créneaux horaires d’écoute et proposera de nouvelles langues.",
+    });
+    await newsM.save();
+  } else {
+    console.log(newsModel.date);
+    newsModel.events.on('error', err => console.log(err.message));
+
+    newsModel.find().sort({ id: 1 }).limit(3);   
+  }
+};
+actus();
