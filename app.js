@@ -32,4 +32,11 @@ function loadcookies() {
   }
   console.log(document.cookie);
 }
-loadcookies();
+// var xhr = new XMLHttpRequest();
+// xhr.open('POST', './', true);
+// xhr.onreadystatechange = function() {
+//   if (xhr.readyState === 4) {
+//     alert(xhr.responseText);
+//   }
+// };
+// xhr.send(JSON.stringify({ uniqueId : document.cookie, connect : true }));
