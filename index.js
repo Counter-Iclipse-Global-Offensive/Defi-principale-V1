@@ -19,11 +19,62 @@ mongoose
     console.log(err);
   });
 
-tracerPos = ["zero", "one", "two", "three"];
-let nbTracer = 0;
+  var tracerPos = ['zero', 'one', 'two', 'three']
+  var formElements = ['firstFormPart', 'secondFormPart', 'thirdFormPart', 'fourthFormPart'];
+  let nbTracer = 0;
+  var emplacement
 
-function nextStep() {
-  document.getElementById("tracer").classList.add(tracerPos[++nbTracer]);
+
+  
+  var flagThemeLight = true;
+  if(flagThemeLight){
+      document.body.setAttribute("data-themeLight","")
+  } else{
+      document.body.removeAttribute("data-themeLight")
+      document.getElementById('logo').style = "height: 50px;";
+  }
+
+  
+window.onkeydown = function (k) {
+    if(k.code === "Enter"){
+        nextStep();
+    }
+  }
+  
+
+  function nextStep() {
+    if (nbTracer < 3) {
+        document.getElementById("tracer").classList.add(tracerPos[++nbTracer])
+        document.getElementById(formElements[nbTracer]).classList.add('show')
+
+    }
+
+    if(nbTracer == 3){
+        document.getElementById('next').innerHTML = "envoyer"
+    } else{
+        document.getElementById('next').innerHTML = "suivant"
+    }
+}
+
+function previousStep() {
+    if (nbTracer > 0) {
+        document.getElementById("tracer").classList.remove(tracerPos[nbTracer])
+        document.getElementById(formElements[nbTracer--]).classList.remove('show')
+        document.getElementById('next').innerHTML = "suivant"
+    }
+}
+
+document.body.onscroll = () => {
+    if(flagThemeLight){
+        var posY = window.scrollY;
+        if (posY > 20) {
+            document.getElementById('logo').style = "height: 50px;";
+        } else {
+            document.getElementById('logo').style = "height: 65px;";
+        }
+    }
+    
+
 }
 
 // actus
