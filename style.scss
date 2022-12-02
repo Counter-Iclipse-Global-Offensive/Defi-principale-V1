@@ -112,7 +112,8 @@ a {
 #logo {
     padding: 7px;
     height: 65px;
-    aspect-ratio: 1;
+    
+    aspect-ratio: initial;
     position: absolute;
     transition: height 150ms ease-in-out;
 }
@@ -184,7 +185,6 @@ a {
     }
 }
 
-#thirdSection {}
 
 #fourthSection {
     background-color: var(--clr-20);
@@ -193,7 +193,7 @@ a {
     align-items: center;
     flex-direction: column;
     padding: 0 5vw;
-    overflow-x: scroll;
+    
 
     h1 {
         font-family: var(--title-font);
