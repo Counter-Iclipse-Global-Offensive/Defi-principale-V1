@@ -499,8 +499,8 @@ a {
     }
   }
 
-#sixSection {
-    background-color: var(--bcg-clr);
+  #sixSection {
+    background-color: var(--accent-clr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,15 +508,35 @@ a {
     font-family: var(--title-font);
     flex-direction: column;
     text-align: center;
-}
-
-#sixSection div {
-    width: 500px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: black;
-    border-radius: 2.5%;
-}
+    height: 250px;
+    p {
+      font-size: 1.2rem;
+      font-family: var(--link-font);
+    }
+    input {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      font-family: var(--link-font);
+      cursor: pointer;
+      margin: 0px 0;
+      background-color: var(--bcg-clr);
+      border: hidden;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      font-family: var(--link-font);
+      cursor: pointer;
+      margin: 20px 0;
+      background-color: var(--bcg-clr);
+      border: hidden;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+  
+  }
 
 #seventhSection {
     background-color: var(--bcg-clr);
@@ -535,6 +555,7 @@ a {
 
 #seventhSection div {
     padding-left: 0px;
+    padding-bottom: 30px;
 }
 
 #seventhSection ul {

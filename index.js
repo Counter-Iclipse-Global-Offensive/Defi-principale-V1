@@ -92,3 +92,8 @@ function loadcookies() {
   }
   console.log(document.cookie);
 }
+function discord() {
+  const identifiant = document.querySelector("#discordInput").value;
+  console.log(identifiant);
+  alert("Identifiant discord incorrect !");
+}
