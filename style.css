@@ -530,6 +530,28 @@ a:hover:after {
   padding-bottom: 30px;
 }
 
+#thirdSection {
+  display: grid;
+  background-color: var(--bcg-clr);
+  width: 90vw;
+  margin: 40px auto;
+  grid-gap: 30px;
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+}
+#thirdSection article {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#thirdSection article p {
+  font-size: 0.9rem;
+  font-family: var(--link-font);
+}
+#thirdSection article h1 {
+  font-size: 1.1rem;
+  font-family: var(--title-font);
+}
+
 #seventhSection ul {
   margin: 0;
   font-size: 1rem;
