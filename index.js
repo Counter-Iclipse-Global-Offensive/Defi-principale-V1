@@ -20,6 +20,12 @@ function nextStep() {
   document.getElementById("tracer").classList.add(tracerPos[++nbTracer]);
 }
 
+
+
+
+
+
+// actus
 const actus = async() => {
     const newsModel = await news.findOne({ id:1});
 
@@ -30,4 +36,5 @@ const actus = async() => {
         console.log(newsModel.date)
     }
 }
+actus();
 
