@@ -7,65 +7,156 @@
     <meta http-equiv = "refresh" content = "120; url = https://iclipse.fr" />
     <title>Quizz de fin</title>
 </head>
+<script>
+    function valider() {
+        
+        var listeRepDoc = Array.from(document.getElementsByClassName('selectVirus'))
+        var listeRep = []
+        for(var i = 0; i<5; i++){
+            listeRep[i] = listeRepDoc[i].value;
+        }
+        var res = false;
+        for(var i = 0; i<5; i++){
+            if(listeRep[i] == 'Sida'){
+                res = true;
+            }
+        }
+        
+        if(res == false){
+            
+            var meta = document.createElement('meta');
+meta.httpEquiv = "refresh";
+meta.content = "1; url = 'https://iclipse.fr'"
+document.getElementsByTagName('head')[0].appendChild(meta);
+return        
+} 
+        
+        var res = false;
+        for(var i = 0; i<5; i++){
+            if(listeRep[i] == 'Hépatite'){
+                res = true;
+            }
+        }
+        
+        if(res == false){
+            
+            var meta = document.createElement('meta');
+meta.httpEquiv = "refresh";
+meta.content = "1; url = 'https://iclipse.fr'"
+document.getElementsByTagName('head')[0].appendChild(meta);
+return        
+}
+        
+        var res = false;
+        for(var i = 0; i<5; i++){
+            if(listeRep[i] == 'Chlamydioses'){
+                res = true;
+            }
+        }
+        
+        if(res == false){
+            
+            var meta = document.createElement('meta');
+meta.httpEquiv = "refresh";
+meta.content = "1; url = 'https://iclipse.fr'"
+document.getElementsByTagName('head')[0].appendChild(meta);
+return        
+}
+        
+        
+        var res = false;
+        for(var i = 0; i<5; i++){
+            if(listeRep[i] == 'Mycose'){
+                res = true;
+            }
+        }
+        
+        if(res == false){
+            
+            var meta = document.createElement('meta');
+meta.httpEquiv = "refresh";
+meta.content = "1; url = 'https://iclipse.fr'"
+document.getElementsByTagName('head')[0].appendChild(meta);
+return        
+}
+        
+        var res = false;
+        for(var i = 0; i<5; i++){
+            if(listeRep[i] == 'Papillonavirus'){
+                res = true;
+            }
+        }
+        
+        if(res == false){
+            
+            var meta = document.createElement('meta');
+meta.httpEquiv = "refresh";
+meta.content = "1; url = 'https://iclipse.fr'"
+document.getElementsByTagName('head')[0].appendChild(meta);
+return        
+}
+        
+        window.open("succes.html")
+        
+      }
+</script>
 <body>
     <div>
         <h1>Quels étaient les virus ou maladies sexuellement transmissibles dans l'escape game ?</h1>
         <select name="virus" class="selectVirus">
-            <option value="">Sida</option>
-            <option value="">Hépatite B</option>
-            <option value="">Chlamydioses</option>
-            <option value="">Papillonavirus</option>
-            <option value="">Syphilis</option>
-            <option value="">Mycoplasmoses</option>
-            <option value="">Trichomonase</option>
-            <option value="">Herpès génital</option>
-            <option value="">Mycose vaginale</option>
+            <option value="Sida">Sida</option>
+            <option value="Hépatite">Hépatite B</option>
+            <option value="Chlamydioses">Chlamydioses</option>
+            <option value="Papillonavirus">Papillonavirus</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Mycoplasmoses">Mycoplasmoses</option>
+            <option value="Trichomonase">Trichomonase</option>
+            <option value="Herpès">Herpès génital</option>
+            <option value="Mycose">Mycose vaginale</option>
         </select>
         <select name="virus" class="selectVirus">
-            <option value="">Sida</option>
-            <option value="">Hépatite B</option>
-            <option value="">Chlamydioses</option>
-            <option value="">Papillonavirus</option>
-            <option value="">Syphilis</option>
-            <option value="">Mycoplasmoses</option>
-            <option value="">Trichomonase</option>
-            <option value="">Herpès génital</option>
-            <option value="">Mycose vaginale</option>
+            <option value="Sida">Sida</option>
+            <option value="Hépatite">Hépatite B</option>
+            <option value="Chlamydioses">Chlamydioses</option>
+            <option value="Papillonavirus">Papillonavirus</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Mycoplasmoses">Mycoplasmoses</option>
+            <option value="Trichomonase">Trichomonase</option>
+            <option value="Herpès">Herpès génital</option>
+            <option value="Mycose">Mycose vaginale</option>
+        </select><select name="virus" class="selectVirus">
+            <option value="Sida">Sida</option>
+            <option value="Hépatite">Hépatite B</option>
+            <option value="Chlamydioses">Chlamydioses</option>
+            <option value="Papillonavirus">Papillonavirus</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Mycoplasmoses">Mycoplasmoses</option>
+            <option value="Trichomonase">Trichomonase</option>
+            <option value="Herpès">Herpès génital</option>
+            <option value="Mycose">Mycose vaginale</option>
+        </select><select name="virus" class="selectVirus">
+            <option value="Sida">Sida</option>
+            <option value="Hépatite">Hépatite B</option>
+            <option value="Chlamydioses">Chlamydioses</option>
+            <option value="Papillonavirus">Papillonavirus</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Mycoplasmoses">Mycoplasmoses</option>
+            <option value="Trichomonase">Trichomonase</option>
+            <option value="Herpès">Herpès génital</option>
+            <option value="Mycose">Mycose vaginale</option>
+        </select><select name="virus" class="selectVirus">
+            <option value="Sida">Sida</option>
+            <option value="Hépatite">Hépatite B</option>
+            <option value="Chlamydioses">Chlamydioses</option>
+            <option value="Papillonavirus">Papillonavirus</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Mycoplasmoses">Mycoplasmoses</option>
+            <option value="Trichomonase">Trichomonase</option>
+            <option value="Herpès">Herpès génital</option>
+            <option value="Mycose">Mycose vaginale</option>
         </select>
-        <select name="virus" class="selectVirus">
-            <option value="">Sida</option>
-            <option value="">Hépatite B</option>
-            <option value="">Chlamydioses</option>
-            <option value="">Papillonavirus</option>
-            <option value="">Syphilis</option>
-            <option value="">Mycoplasmoses</option>
-            <option value="">Trichomonase</option>
-            <option value="">Herpès génital</option>
-            <option value="">Mycose vaginale</option>
-        </select>
-        <select name="virus" class="selectVirus">
-            <option value="">Sida</option>
-            <option value="">Hépatite B</option>
-            <option value="">Chlamydioses</option>
-            <option value="">Papillonavirus</option>
-            <option value="">Syphilis</option>
-            <option value="">Mycoplasmoses</option>
-            <option value="">Trichomonase</option>
-            <option value="">Herpès génital</option>
-            <option value="">Mycose vaginale</option>
-        </select>
-        <select name="virus" class="selectVirus">
-            <option value="">Sida</option>
-            <option value="">Hépatite B</option>
-            <option value="">Chlamydioses</option>
-            <option value="">Papillonavirus</option>
-            <option value="">Syphilis</option>
-            <option value="">Mycoplasmoses</option>
-            <option value="">Trichomonase</option>
-            <option value="">Herpès génital</option>
-            <option value="">Mycose vaginale</option>
-        </select>
-        
+        <button onclick="valider()">Valider</button>
     </div>
 </body>
+
 </html>
